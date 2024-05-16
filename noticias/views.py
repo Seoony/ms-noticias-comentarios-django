@@ -20,8 +20,7 @@ def create_noticia(request):
     serializer = NoticiaSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
-        return Response(serializer.data)
-    return Response(serializer.errors)
+    return Response(serializer.data)
 
 @api_view(["PUT"])
 def update_noticia(request, pk):
@@ -29,8 +28,7 @@ def update_noticia(request, pk):
     serializer = NoticiaSerializer(instance=noticia, data=request.data)
     if serializer.is_valid():
         serializer.save()
-        return Response(serializer.data)
-    return Response(serializer.errors)
+    return Response(serializer.data)
 
 @api_view(["DELETE"])
 def delete_noticia(request, pk):
