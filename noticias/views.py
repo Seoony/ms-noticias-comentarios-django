@@ -1,6 +1,6 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .serialiazers import NoticiaSerializer
+from .serializers import NoticiaSerializer
 from .models import Noticia
 
 @api_view(["GET"])
